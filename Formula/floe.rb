@@ -1,28 +1,22 @@
 class Floe < Formula
-  GITHUB_REPO = "malon64/floe"
-
-  desc "Floe CLI"
-  homepage "https://github.com/#{GITHUB_REPO}"
-  version "0.1.0"
+  desc "YAML-driven technical ingestion tool"
+  homepage "https://github.com/malon64/floe"
+  version "0.1.1"
   license "MIT"
 
-  on_macos do
-    on_intel do
-      url "https://github.com/#{GITHUB_REPO}/releases/download/v#{version}/floe-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "REPLACE_ME_SHA256_X86_64_APPLE_DARWIN"
+  if OS.mac?
+    if Hardware::CPU.arm?
+      url "https://github.com/malon64/floe/releases/download/v0.1.1/floe-v0.1.1-aarch64-apple-darwin.tar.gz"
+      sha256 "54c229ca8dbc1603bee5f13e1558503e85501e7350b3793f55741a926e976559"
+    else
+      url "https://github.com/malon64/floe/releases/download/v0.1.1/floe-v0.1.1-x86_64-apple-darwin.tar.gz"
+      sha256 "22e637dded8a481e41aec3558d0342f7aae96ad31f95827241e8a094fdcdb5f7"
     end
-
-    on_arm do
-      url "https://github.com/#{GITHUB_REPO}/releases/download/v#{version}/floe-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "REPLACE_ME_SHA256_AARCH64_APPLE_DARWIN"
-    end
-  end
-
-  on_linux do
-    on_intel do
-      url "https://github.com/#{GITHUB_REPO}/releases/download/v#{version}/floe-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "REPLACE_ME_SHA256_X86_64_UNKNOWN_LINUX_GNU"
-    end
+  elsif OS.linux?
+    url "https://github.com/malon64/floe/releases/download/v0.1.1/floe-v0.1.1-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "82b3d7dc1776be08f579d6400b0b3bbb8edf9122890c1e14fa6c8a58f846a0c4"
+  else
+    odie "Unsupported platform"
   end
 
   def install
@@ -30,6 +24,6 @@ class Floe < Formula
   end
 
   test do
-    system "#{bin}/floe", "--version"
+    system "#<built-in function bin>/floe", "--help"
   end
 end
