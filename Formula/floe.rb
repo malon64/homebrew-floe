@@ -1,20 +1,20 @@
 class Floe < Formula
   desc "YAML-driven technical ingestion tool"
   homepage "https://github.com/malon64/floe"
-  version "0.2.6"
+  version "0.2.7"
   license "MIT"
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/malon64/floe/releases/download/v0.2.6/floe-v0.2.6-aarch64-apple-darwin.tar.gz"
-      sha256 "5de8a3e34a880c4df6bd0a2147fa5db632472e2bb58962c4877decd7287c2de1"
+      url "https://github.com/malon64/floe/releases/download/v0.2.7/floe-v0.2.7-aarch64-apple-darwin.tar.gz"
+      sha256 "5546a8ba33406924616653a955148a1ac0a5e79768250f51a5d23f1ae5115569"
     else
-      url "https://github.com/malon64/floe/releases/download/v0.2.6/floe-v0.2.6-x86_64-apple-darwin.tar.gz"
-      sha256 "e35ca603bce4993a97b4aa855d9a825a256708878be441cf77ff034ea8b6392b"
+      url "https://github.com/malon64/floe/releases/download/v0.2.7/floe-v0.2.7-x86_64-apple-darwin.tar.gz"
+      sha256 "914585f024c55939b9b3f2b09e2cceccc441037f0734946ac12a64663328e235"
     end
   elsif OS.linux?
-    url "https://github.com/malon64/floe/releases/download/v0.2.6/floe-v0.2.6-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "f88966486ef742f161b71591530aa493c2e0bfca220b7baee6ebdc9cc87b8bca"
+    url "https://github.com/malon64/floe/releases/download/v0.2.7/floe-v0.2.7-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "32897a75a33dd8fa5a6d9c8f7d89f753f00c613b2aec2c86a60453106d692d2c"
   else
     odie "Unsupported platform"
   end
