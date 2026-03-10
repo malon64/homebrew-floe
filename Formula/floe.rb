@@ -7,14 +7,14 @@ class Floe < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/malon64/floe/releases/download/v0.3.1/floe-v0.3.1-aarch64-apple-darwin.tar.gz"
-      sha256 "87bac53f40a742c6b02248031280d37a8b59a041e0306c5543dbee4958b7f613"
+      sha256 "5c3b1e0a58b82108298aaa39655bd734386c7a8ececde32b1af14052a9ff9569"
     else
       url "https://github.com/malon64/floe/releases/download/v0.3.1/floe-v0.3.1-x86_64-apple-darwin.tar.gz"
-      sha256 "90b04ad5a1fadba99a835be4d064fc5d7e40c987cd40881e611f2e191a360192"
+      sha256 "a296ed71df3b72db00b0453a15c3c9fe00e87a263eecf0a4c7487623cc89d7ec"
     end
   elsif OS.linux?
     url "https://github.com/malon64/floe/releases/download/v0.3.1/floe-v0.3.1-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "4f0e24f5ddd1bb56567dd6bde0cec1331a1d8fa7bdf1534d9a44d126054b8563"
+    sha256 "81d8da3b5768547dc1e9fba1b8afaad5408697b584448e9b06cf974ace4ce816"
   else
     odie "Unsupported platform"
   end
