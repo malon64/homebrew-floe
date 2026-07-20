@@ -1,24 +1,24 @@
 class FloeDuckdb < Formula
   desc "YAML-driven ingestion tool — full build with DuckDB sink support"
   homepage "https://github.com/malon64/floe"
-  version "0.6.9"
+  version "0.6.10"
   license "MIT"
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/malon64/floe/releases/download/v0.6.9/floe-duckdb-v0.6.9-aarch64-apple-darwin.tar.gz"
-      sha256 "e6273be984905557861cea957cd13d23e0fdd84b52334294607b5258003b0349"
+      url "https://github.com/malon64/floe/releases/download/v0.6.10/floe-duckdb-v0.6.10-aarch64-apple-darwin.tar.gz"
+      sha256 "6348108f8950bc9e1f29a36485ce19a4e83bbadf44a99c3e94c51059551fd0e7"
     else
-      url "https://github.com/malon64/floe/releases/download/v0.6.9/floe-duckdb-v0.6.9-x86_64-apple-darwin.tar.gz"
-      sha256 "3c7991f03a5f2d34ad40017a87ac6c2a2bf6d6a7a67d201540963c9d6833db84"
+      url "https://github.com/malon64/floe/releases/download/v0.6.10/floe-duckdb-v0.6.10-x86_64-apple-darwin.tar.gz"
+      sha256 "d8598c36c8fcb9189f97b3b99bcade1df64f1ff8af2598c082524864978bcd89"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/malon64/floe/releases/download/v0.6.9/floe-duckdb-v0.6.9-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "b7bda80be76cbf33e1f8097614b333d346df22f492f6b3ed96b4ab9fba724042"
+      url "https://github.com/malon64/floe/releases/download/v0.6.10/floe-duckdb-v0.6.10-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "36f5cbc39610d4141cfa9d4224ba3b3edae5c7b54291c2dfaec66ee3c1f142f7"
     else
-      url "https://github.com/malon64/floe/releases/download/v0.6.9/floe-duckdb-v0.6.9-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "8de6f2c1c683a97677542504436306f297281f376a81b18b64a29cec02771b5d"
+      url "https://github.com/malon64/floe/releases/download/v0.6.10/floe-duckdb-v0.6.10-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "f67bf73bb2956c12f875554db9d51425fd9d9c0c9ba5497598f67a9686794e32"
     end
   else
     odie "Unsupported platform"
